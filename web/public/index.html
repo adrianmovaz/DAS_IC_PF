@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DAS · Iluminación</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="bar">
+    <h1>DAS · Iluminación de la habitación</h1>
+    <span id="status" class="status off">desconectado</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="readout">
+        <span id="lux" class="value">—</span>
+        <span class="unit">lux</span>
+      </div>
+      <div id="state" class="state">—</div>
+    </section>
+
+    <section class="metrics">
+      <div class="metric"><span class="k">Voltaje</span><span id="voltage" class="v">— V</span></div>
+      <div class="metric"><span class="k">Código ADC</span><span id="code" class="v">—</span></div>
+      <div class="metric"><span class="k">Muestreo</span><span id="rate" class="v">— Hz</span></div>
+      <div class="metric"><span class="k">Mín / Prom / Máx</span><span id="mmm" class="v">—</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <span id="chartTitle">Señal reconstruida — voltaje</span>
+        <button id="toggle" class="toggle">ver lux</button>
+      </div>
+      <canvas id="chart" width="1000" height="320"></canvas>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
